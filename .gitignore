@@ -1,0 +1,12 @@
+# datasets are not redistributed
+data/
+
+# model weights
+*.pth
+*.pt
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store

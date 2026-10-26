@@ -1,0 +1,31 @@
+# University of Patras Sober-Drunk dataset
+
+dataset: patras
+data_root: data/patras            # folder with one sub-folder per participant
+site: eye                         # periorbital crops (face, eye, ear, hand available)
+sober: 1                          # acquisition 1 = before drinking
+intoxicated: 4                    # acquisition 4 = 80 min after drinking ended
+excluded: [9, 11, 12, 13, 14, 20, 24]   # see notebooks/01_data_check.ipynb
+
+frames_per_recording: 5
+image_size: [224, 224]
+
+model: resnet18
+dropout: 0.5
+lr: 1.0e-5
+batch_size: 16
+epochs: 100
+patience: 20                      # early stopping on the validation loss
+lr_factor: 0.1                    # learning rate multiplied by this when the
+lr_patience: 5                    # validation loss has not improved for 5 epochs
+val_fraction: 0.1
+threshold: 0.5
+seed: 42
+num_workers: 4                    # set 0 on macOS/Windows
+
+# P4 / P4c: frames added from the 20 and 50 min acquisitions
+identity_acqs: [2, 3]
+identity_frames: 5
+
+# frame statistics for the one-feature baseline use pixels above this value
+body_threshold: 0

@@ -1,0 +1,31 @@
+# PUCV-DTF (Hermosilla et al. 2018), same settings as patras.yaml unless noted
+
+dataset: pucv
+data_root: data/pucv              # folders 1 to 5, one per condition
+site: face                        # only face crops are released
+sober: 1                          # condition 1 = sober
+intoxicated: 5                    # condition 5 = after the fourth beer
+excluded: []
+
+frames_per_recording: 5
+image_size: [224, 224]
+
+model: resnet18
+dropout: 0.5
+lr: 1.0e-5
+batch_size: 16
+epochs: 100
+patience: 20
+lr_factor: 0.1
+lr_patience: 5
+val_fraction: 0.1
+threshold: 0.5
+seed: 42
+num_workers: 4                    # set 0 on macOS or Windows
+
+# P4 / P4c: frames added from the recordings after the second and third beers
+identity_acqs: [3, 4]
+identity_frames: 5
+
+# the crops have no zero background, so face pixels are taken as > 100 (of 255)
+body_threshold: 100

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: If you use this code, please cite it as below.
+title: "thermal-loso: frame-level partitioning in thermal intoxication detection"
+authors:
+  - family-names: Mondal
+    given-names: Arghya Dev
+    orcid: "https://orcid.org/0009-0006-8827-5720"
+    affiliation: Indian Institute of Technology Jammu
+  - family-names: Kaur
+    given-names: Harkeerat
+    affiliation: Indian Institute of Technology Jammu
+repository-code: "https://github.com/arghya-d/thermal-loso"
+license: MIT
+version: 1.0.0
+keywords:
+  - thermal infrared imaging
+  - alcohol intoxication
+  - data leakage
+  - evaluation protocol
+  - leave-one-subject-out cross-validation
